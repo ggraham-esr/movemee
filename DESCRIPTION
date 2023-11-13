@@ -1,0 +1,13 @@
+Package: movemee
+Type: Package
+Title: Moving Objects and Various files Easily, Made for ESR Epi team 
+Version: 0.0.0.9000
+Author: Giles Graham
+Maintainer: Giles Graham <giles.graham@esr.cri.nz>
+Description: Move Files or Folders to and from Sharepoint to Rstudio Server
+    This package is made to lightly wrap around rclone, a terminal based program 
+    helps to move files around. We use it in the Epi team at ESR to get files 
+    to and from Sharepoint.
+License: Licensed under Copyright to ESR 2023.
+Encoding: UTF-8
+LazyData: true
