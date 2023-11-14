@@ -17,7 +17,7 @@ optional_working_directory <- function(x){
 
   if(needs_wd){
     return(
-      paste0(get_wd(),'/',x)
+      paste0(getwd(),'/',x)
     )
   }else{
     return(x)
