@@ -14,7 +14,7 @@ show_me_files <- function(
     rclone_options = NULL
 ){
 
-  if(!grepl(location,':')){
+  if(!grepl(':',location)){
     stop('no sharepoint location specified')
   }
   open_rclone <- 'module load rclone;'
