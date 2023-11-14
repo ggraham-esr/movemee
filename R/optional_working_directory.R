@@ -12,8 +12,8 @@
 optional_working_directory <- function(x){
 
   needs_wd <-
-    (! grepl(getwd(),file)) &
-    (! grepl(':',file))
+    (! grepl(getwd(),x)) &
+    (! grepl(':',x))
 
   if(needs_wd(x)){
     return(
