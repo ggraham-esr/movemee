@@ -9,7 +9,7 @@
 #' @examples
 #' \dontrun{
 #' # made up location
-#' sharepoint_directions('Epidemiology','Surveillance','Giardia','Quarterly Report','Input','2023-Q4_report_data.csv')}
+#' sharepoint_directions('Epidemiology','Surveillance','Giardia','Quarterly Report','Input','2023-Q4_report_data.csv')
 #' }
 #'
 sharepoint_directions <- function(

@@ -2,16 +2,16 @@
 
 #' Show the contents of a sharepoint directory
 #'
-#' @param location
-#' @param rclone_options
+#' @param location the sharepoint location you want to know about
+#' @param rclone_options options to pass to rclone
 #'
-#' @return
+#' @return dataframe of filenames. Not recursive by default.
 #' @export
 #'
-#' @examples
+#'
 show_me_files <- function(
     location,
-    rclone_options = NULL,
+    rclone_options = NULL
 ){
 
   if(!grepl(location,':')){

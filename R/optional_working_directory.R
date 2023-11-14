@@ -6,7 +6,7 @@
 #'
 #' This is a safeguard - best practice is to use the 'here' package
 #'
-#' @param x
+#' @param x a string, a filepath
 #' @returns a string, either the same filepath, or wd/filepath
 
 optional_working_directory <- function(x){
