@@ -2,7 +2,8 @@
 % Please edit documentation in R/sharepoint_directions.R
 \name{sharepoint_directions}
 \alias{sharepoint_directions}
-\title{Give directions to a sharepoint file or location}
+\title{Give directions to a sharepoint file or location
+As of ver .9005 supports splicing (!!!) vectors in}
 \usage{
 sharepoint_directions(remote_link, ...)
 }
@@ -16,6 +17,7 @@ an appropriately formatted filepath for specifying Sharepoint locations in rclon
 }
 \description{
 Give directions to a sharepoint file or location
+As of ver .9005 supports splicing (!!!) vectors in
 }
 \examples{
 \dontrun{

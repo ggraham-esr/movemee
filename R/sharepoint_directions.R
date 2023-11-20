@@ -1,5 +1,5 @@
 #' Give directions to a sharepoint file or location
-#'
+#' As of ver .9005 supports splicing (!!!) vectors in
 #' @param remote_link The name of the Sharepoint site e.g. Epidemiology
 #' @param ... subsequent subfolders and filename strings, comma separated
 #'
@@ -17,5 +17,5 @@ sharepoint_directions <- function(
     ...
 ){
 
-  paste0(remote_link,':',shQuote(paste(...,sep='/'),'cmd'))
+  inject(paste0(remote_link,':',shQuote(paste(...,sep='/'),'cmd')))
 }

@@ -31,7 +31,7 @@ Move file(s) to or from Sharepoint
 \dontrun{
 
 
-output_location <- sharepoint_directions('Epidemiology','Surveillance','Random Analysis','Output Folder')
+output_location <- sharepoint_directions('Some Sharepointsite','A Project','Random Analysis','Output Folder')
 
 move_file(
 here('output','final_graph.png'),
