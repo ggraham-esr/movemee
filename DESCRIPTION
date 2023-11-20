@@ -10,5 +10,8 @@ Description: Move Files or Folders to and from Sharepoint to Rstudio Server
     to and from Sharepoint.
 License: Licensed under Copyright to ESR 2023.
 Encoding: UTF-8
+Imports:
+  rlang,
+  here
 LazyData: true
 RoxygenNote: 7.2.3
