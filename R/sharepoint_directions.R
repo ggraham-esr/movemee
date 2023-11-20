@@ -16,6 +16,9 @@ sharepoint_directions <- function(
     remote_link,
     ...
 ){
+  the_dirs <- shQuote(do.call(
+    paste,list2(sep='/',...)
+  ))
 
-  inject(paste0(remote_link,':',shQuote(paste(...,sep='/'),'cmd')))
+  paste0(remote_link,':',the_dirs)
 }
