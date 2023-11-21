@@ -16,5 +16,5 @@
 #'
 #'
 local_directions <- function(...){
-  shQuote(rlang::inject(here::here(list2(...))))
+  shQuote(rlang::inject(here::here(rlang::list2(...))))
 }
