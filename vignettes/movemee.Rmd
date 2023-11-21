@@ -67,3 +67,27 @@ local_data <- c('My data','input','extracts')
 
 local_directions(!!!local_data)
 ```
+## show_me_files()
+
+```
+show_me_files(sharepoint_directions('mySite','Where I want to look'))
+```
+This is to give rudimentary list.files() functionality over Sharepoint locations. It doesn't work on local directions (I think).
+
+## extra for experts
+
+### 'moving' is copying
+
+So by default the function `move_file()` actually copies a file. The key here is the argument `rclone_command = 'copy'`if you don't want this you have to tweak the `rclone_command` argument i.e. `move_file(file, destination,rclone_command = 'move'`. 
+
+### moving a whole folder
+
+You can specify a folder in the `file` argument. It will copy all contents of that folder to the destination folder. 
+
+### moving several files but not a whole folder
+
+You can pass a vector to the sharepoint_directions or the local_directions without splicing to get a vector of addresses back. Then you can use purrr::map or purrr::map2 to run through `move_file()` with each one.
+
+### rclone_options
+
+Here you can pass the option flags to rclone. Read the [rclone documentation]() for more info. Only use this if you're familiar with what rclone is and how it works.
