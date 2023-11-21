@@ -22,7 +22,7 @@ library(movemee)
 
 This package was developed to give the ESR Epi team an easy way to use `rclone` in an R script. It consists of a main function `move_file()` and some convenience functions `sharepoint_directions()` and `local_directions()` that help structure directories correctly. Finally there is a separate function called `show_me_files()` that can be used to look into sharepoint for contents of folders. 
 
-To use this package you will need to have configured your rclone remotes. Start by opening a new terminal (alt + shift + R). Type in `module load rclone` and hit return. Then follow Russell Smithies' [Walkthrough](). Your induction document will have the relevant names and site urls for your sharepoint sites.
+To use this package you will need to have configured your rclone remotes. Start by opening a new terminal (alt + shift + R). Type in `module load rclone` and hit return. Then follow Russell Smithies' [Walkthrough](https://kscprod-bioman1.esr.cri.nz/wiki/index.php/Sharepoint_Access_from_Linux). Your induction document will have the relevant names and site urls for your sharepoint sites.
 
 ## move_file()
 
@@ -49,6 +49,7 @@ This function supports splicing (!!!) so you can pass vectors too (but you must 
 
 ```{r}
 
+
 sp_data_location <- c('Project Folder','Input Data')
 
 sharepoint_directions('mySite',!!!sp_data_location)
@@ -57,11 +58,16 @@ sharepoint_directions('mySite',!!!sp_data_location)
 
 ## local_directions()
 
-This is similar to sharepoint directions. It's actually pretty much here::here, but I've wrapped it up to do two things:
+This is similar to sharepoint directions. It's actually pretty much [here::here](https://here.r-lib.org/), but I've wrapped it up to do two things:
 1. allow splicing in of a vector
 2. pass strings with spaces in them safely to rclone
 
 ```{r}
+
+# if you just used here() rclone would throw an error: 'too many arguments' or something
+local_directions('My data','input','extracts')
+
+# also allows splicing
 
 local_data <- c('My data','input','extracts')
 
@@ -78,7 +84,7 @@ This is to give rudimentary list.files() functionality over Sharepoint locations
 
 ### 'moving' is copying
 
-So by default the function `move_file()` actually copies a file. The key here is the argument `rclone_command = 'copy'`if you don't want this you have to tweak the `rclone_command` argument i.e. `move_file(file, destination,rclone_command = 'move'`. 
+So by default the function `move_file()` actually copies a file. The key here is the argument `rclone_command = 'copy'`. if you don't want this you have to tweak the `rclone_command` argument i.e. `move_file(file, destination,rclone_command = 'move'`. 
 
 ### moving a whole folder
 
@@ -90,4 +96,4 @@ You can pass a vector to the sharepoint_directions or the local_directions witho
 
 ### rclone_options
 
-Here you can pass the option flags to rclone. Read the [rclone documentation]() for more info. Only use this if you're familiar with what rclone is and how it works.
+Here you can pass the option flags to rclone. Read the [rclone documentation](https://rclone.org/) for more info. Only use this if you're familiar with what rclone is and how it works.
