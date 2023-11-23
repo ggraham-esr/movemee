@@ -8,7 +8,7 @@ move_file(
   file,
   destination,
   rclone_command = "rclone copy",
-  rclone_options = "--progress --ignore-size",
+  rclone_options = "--progress",
   show_command_line_command = FALSE
 )
 }
