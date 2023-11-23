@@ -26,13 +26,10 @@ move_file <- function(
     file,
     destination,
     rclone_command = 'rclone copy',
-    rclone_options = '--progress --ignore-size',
+    rclone_options = '--progress',
     show_command_line_command = FALSE
 
 ){
-
-  file <- optional_working_directory(file)
-  destination <- optional_working_directory(destination)
 
   if(!any(grepl(':',c(file,destination)))){
     stop(
