@@ -3,6 +3,7 @@
 
 
 ```
+devtools::install_github('ggraham-esr/movemee')
 library(movemee)
 ```
 
