@@ -25,6 +25,14 @@ move_file(
 
 This is the most straightforward way to use it. You specify a file, and a destination. rclone will move the file listed, and will print out progress along the way. You can move something from sharepoint and to sharepoint, just so long as you've got your sharepoint_directions in the right place.
 
+### Notes on movement particulars:
+
+- You cannot overwrite an open file on Sharepoint
+- You can move an open file into Rstudio.
+- xlsx files and other Microsoft Office file formats can't be overwritten to sharepoint with default settings. You will need to use some specific rclone options, rclone_options = "--ignore-size  --no-check-dest --progress"
+- by default movemee will overwrite the destination file even if it is newer than the source file. To change this use rclone_options = "--update --progress"
+- "--progress" means movemee (rather, rclone) will keep you updated with how it's going moving things, and is included in the options by default If this gets annoying remove it from your rclone_options argument, or pass rclone_options = ""
+
 ## sharepoint_directions()
 
 ```
