@@ -1,7 +1,7 @@
 Package: movemee
 Type: Package
 Title: Moving Objects and Various files Easily, Made for ESR Epi team 
-Version: 1.0.1
+Version: 1.0.2
 Author: Giles Graham
 Maintainer: Giles Graham <giles.graham@esr.cri.nz>
 Description: Move Files or Folders to and from Sharepoint to Rstudio Server
